@@ -67,7 +67,7 @@ public static void main(String[] args) {
     meuIPhone.atualizarPagina();
 }
 
-
+````
 ### Explicação:
 1. **Estrutura do Projeto**: Descreve as interfaces e classes do projeto, incluindo seus métodos.
 2. **Execução**: Fornece um exemplo de como executar o projeto, compilando e rodando a classe `IPhone`.
