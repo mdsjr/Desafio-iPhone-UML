@@ -1,0 +1,63 @@
+@startuml
+
+skin rose
+
+title Diagrama UML - Projeto iPhone
+
+interface ReprodutorMusical {
+  +void tocar()
+  +void pausar()
+  +void selecionarMusica(String musica)
+}
+
+interface AparelhoTelefonico {
+  +void ligar(String numero)
+  +void atender()
+  +void iniciarCorreioVoz()
+}
+
+interface NavegadorInternet {
+  +void exibirPagina(String url)
+  +void adicionarNovaAba()
+  +void atualizarPagina()
+}
+
+class Musica {
+  -String titulo
+  -String artista
+  -int duracao
+
+  +Musica(String titulo, String artista, int duracao)
+  +String getTitulo()
+  +String getArtista()
+  +int getDuracao()
+}
+
+class Contato {
+  -String nome
+  -String numeroTelefone
+
+  +Contato(String nome, String numeroTelefone)
+  +String getNome()
+  +String getNumeroTelefone()
+}
+
+class IPhone {
+  +void tocar()
+  +void pausar()
+  +void selecionarMusica(String musica)
+
+  +void ligar(String numero)
+  +void atender()
+  +void iniciarCorreioVoz()
+
+  +void exibirPagina(String url)
+  +void adicionarNovaAba()
+  +void atualizarPagina()
+}
+
+ReprodutorMusical <|.. IPhone
+AparelhoTelefonico <|.. IPhone
+NavegadorInternet <|.. IPhone
+
+@enduml
